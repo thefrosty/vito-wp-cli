@@ -4,7 +4,7 @@ This is the basic skeleton of a VitoDeploy plugin that you can start with.
 
 ## Documentation
 
-You can find everything about Plugin development [here](https://vitodeploy.com/docs/plugins)
+You can find everything about Plugin development [here](https://vitodeploy.com/docs/4.x/plugins)
 
 ## Discovery
 

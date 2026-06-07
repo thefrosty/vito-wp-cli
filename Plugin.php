@@ -1,18 +1,28 @@
 <?php
 
-namespace App\Vito\Plugins\Vitodeploy\PluginTemplate;
+namespace App\Vito\Plugins\TheFrosty\VitoWpCli;
 
 use App\Plugins\AbstractPlugin;
+use App\Plugins\RegisterServiceType;
+use App\Plugins\RegisterViews;
+use App\Vito\Plugins\TheFrosty\VitoWpCli\Services\WpCli;
 
 class Plugin extends AbstractPlugin
 {
-    protected string $name = 'Plugin Template';
+    protected string $name = 'WP CLI';
 
-    protected string $description = 'An example plugin template for vito plugins';
+    protected string $description = 'A Vito plugin to install WP CLI';
 
     public function boot(): void
     {
-        // Register plugin features here
-        // https://vitodeploy.com/docs/plugins
+        RegisterViews::make(WpCli::id())
+            ->path(__DIR__ . '/views')
+            ->register();
+
+        RegisterServiceType::make(WpCli::id())
+            ->type(WpCli::type())
+            ->label('WP CLI')
+            ->handler(WpCli::class)
+            ->register();
     }
 }

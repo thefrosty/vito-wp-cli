@@ -69,6 +69,7 @@ class WpCli extends AbstractService
             'uninstall-wp-cli'
         );
         event('service.uninstalled', $this->service);
+        $this->service->server->os()->cleanup();
     }
 
     /**

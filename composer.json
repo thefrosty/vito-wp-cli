@@ -1,0 +1,31 @@
+{
+  "name": "thefrosty/vito-wp-cli",
+  "description": "A Vito plugin to install WP CLI",
+  "minimum-stability": "beta",
+  "prefer-stable": false,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Austin Passy",
+      "email": "thefrosty@users.noreply.github.com",
+      "homepage": "https://austin.passy.co"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Vito\\Plugins\\TheFrosty\\VitoWpCli\\": "/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/vitodeploy/vito"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "require-dev": {
+    "vitodeploy/vito": "4.*"
+  }
+}

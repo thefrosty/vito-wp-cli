@@ -1,5 +1,3 @@
-#!/bin/bash
-
 which wp
 
 sudo rm /usr/local/bin/wp

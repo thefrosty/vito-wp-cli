@@ -1,5 +1,3 @@
-#!/bin/bash
-
 cd "$HOME"
 
 # https://make.wordpress.org/cli/handbook/guides/installing/#recommended-installation

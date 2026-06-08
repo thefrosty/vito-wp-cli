@@ -6,6 +6,7 @@ namespace App\Vito\Plugins\TheFrosty\VitoWpCli\Services;
 
 use App\Exceptions\SSHError;
 use App\Services\AbstractService;
+use Closure;
 use function event;
 use function trim;
 use function view;
@@ -30,6 +31,19 @@ class WpCli extends AbstractService
     public function unit(): string
     {
         return 'wp-cli';
+    }
+
+    public function creationRules(array $input): array
+    {
+        return [
+            'type' => [
+                function (string $attribute, mixed $value, Closure $fail): void {
+                    if ($this->service->server->services()->where('name', self::id())->exists()) {
+                        $fail('WP-CLI is already installed on this server.');
+                    }
+                },
+            ],
+        ];
     }
 
     /**

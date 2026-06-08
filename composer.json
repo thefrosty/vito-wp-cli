@@ -23,7 +23,7 @@
     }
   ],
   "require": {
-    "php": ">=8.0"
+    "php": ">=8.4"
   },
   "require-dev": {
     "vitodeploy/vito": "4.*"

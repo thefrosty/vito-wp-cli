@@ -29,7 +29,7 @@ views/uninstall.blade.php  # Blade template with the un-install shell script
 
 ## Development notes
 
-- This is a PHP 8.0+ project with no test suite or build steps.
+- This is a PHP 8.4+ project with no test suite or build steps.
 - The `vendor/` directory is gitignored; `composer.json` references `vitodeploy/vito: 4.*` as a dev dependency.
 - Views are blade templates containing raw shell scripts (not rendered HTML).
 - See VitoDeploy 4.x plugin docs: https://vitodeploy.com/docs/4.x/plugins
